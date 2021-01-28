@@ -1,0 +1,19 @@
+1. Error: The width attribute on the table element is obsolete. Use CSS instead.
+From line 133, column 5; to line 133, column 34
+</h3>↩    <table border="2" width="50%">↩
+
+2. Error: The border attribute on the table element is obsolete. Use CSS instead.
+From line 133, column 5; to line 133, column 34
+</h3>↩ <table border="2" width="50%">↩
+
+3. Error: The name attribute on the option element is obsolete. Use the id attribute instead.
+From line 210, column 17; to line 210, column 64
+          <option name="user-type" value="guest" selected>Гість<
+
+4. Error: The name attribute on the option element is obsolete. Use the id attribute instead.
+From line 211, column 17; to line 211, column 60
+          <option name="user-type" value="registered">Зареєс
+
+5. Error: The name attribute on the option element is obsolete. Use the id attribute instead.
+From line 212, column 17; to line 212, column 57
+          <option name="user-type" value="premium">Премуі
