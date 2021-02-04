@@ -1,0 +1,47 @@
+.large-font {
+    font-size: 1.25em;
+    background-color: #effcff;
+}
+
+.middle-font {
+    font-size: 18px;
+    background-color: RGB(255, 255, 238);
+}
+
+#small-font {
+    font-size: 90%;
+    background-color: lavenderblush;
+}
+
+#company-info p:first-letter {
+    font-size: 150%;
+    color: #0000ff;
+}
+
+#authority a {
+    color: RGB(217, 0, 255);
+    opacity: 70%;
+}
+
+#authority a[href*="gov.ua"] {
+    font-weight: bold;
+    color: RGB(217, 0, 100);
+}
+
+body {
+    margin: 50px;
+}
+
+h3 {
+    color: darkorange;
+    background-color: #ffcd96;
+}
+
+#finances td {
+    background-color: lightgoldenrodyellow;
+}
+
+#customers {
+    border: 1px solid gold;
+    box-shadow: 0 0 10px khaki;
+}

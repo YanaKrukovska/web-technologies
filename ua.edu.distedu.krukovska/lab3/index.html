@@ -5,6 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Content Share</title>
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        #services li {
+            color: blueviolet;
+            background: floralwhite;
+        }
+    </style>
+
 </head>
 
 <!--The main body of the page-->
@@ -43,20 +52,20 @@
 <!--About us section-->
 <div id="company-info">
     <h3>Про нас:</h3>
-    <p><u>Нашу компанію</u> було створено <b>21 січня 2020</b> і вона <i>одразу</i> набрала популярності серед
+    <p class="large-font"><u>Нашу компанію</u> було створено <b>21 січня 2020</b> і вона <i>одразу</i> набрала
+        популярності серед
         користувачів мережі. <br> Дуже
         швидко нею почали користуватися і знаменитості. За рік відбулося відкриття 1-ого офісу
         <abbr title="Content Share">CS</abbr>, що розташований на вулиці
         <mark>Фейкова 4 <sub>1/2</sub></mark>
         та працює
         кожного дня з 8<sup>00</sup> до 20<sup>00</sup></p>
-    <p>Ми займаємося підтримкою <em>середовища</em>, в якому користувачі можуть поширювати контент
+    <p class="middle-font">Ми займаємося підтримкою <em>середовища</em>, в якому користувачі можуть поширювати контент
         <strong>будь-якого</strong> напрямку. Доступ до всіх можливостей є
         <del>платним</del>
         <ins>безкоштовним</ins>
     </p>
-    <p>Наша мета - полегшити поширення творчості та інформації</p>
-    <p>Наші творці: Круковська Яна</p>
+    <p id="small-font">Наша мета - полегшити поширення творчості та інформації</p>
 </div>
 
 <!--Figure section-->
@@ -68,9 +77,10 @@
 <!--"Authorities section-->
 <div id="authority">
     <h3>Контролюючі органи</h3>
-    <a href="https://www.president.gov.ua/en">Президент України</a>
-    <a href="https://www.rada.gov.ua/en/">Парламент</a>
-    <a href="https://kyivcity.gov.ua/">КМДА</a>
+    <a href="https://www.president.gov.ua">Президент України</a>
+    <a href="https://www.rada.gov.ua">Парламент</a>
+    <a href="https://www.ukma.edu.ua">НаУКМА</a>
+    <a href="https://kyivcity.gov.ua">КМДА</a>
 </div>
 
 <!--Documents section-->
@@ -111,22 +121,34 @@
     </ol>
 </div>
 
+<div id="audio-wolf">
+    <audio controls>
+        <source src="files/wolfynya.mp3" type="audio/mp3">
+    </audio>
+</div>
+
 <!--Detailed services section-->
 <div id="services-detailed">
     <h3>Послуги (детально)</h3>
     <dl>
-        <dt>Додавання контенту</dt>
-        <dd>Тексту</dd>
-        <dd>Відео</dd>
-        <dd>Аудіо</dd>
-        <dt>Оцінювання контенту</dt>
-        <dd>За 5 зірковою шкалою</dd>
-        <dt>Пошук інформації</dt>
-        <dd>За різними параметрами</dd>
-        <dt>Збір статистики</dt>
-        <dd>Переглядів</dd>
-        <dd>Вподобань</dd>
+        <dt style="color: darkslateblue; background: lightcyan">Додавання контенту</dt>
+        <dd style="color: blue; background: azure">Тексту</dd>
+        <dd style="color: blue; background: azure">Відео</dd>
+        <dd style="color: blue; background: azure">Аудіо</dd>
+        <dt style="color: darkslateblue; background: lightcyan">Оцінювання контенту</dt>
+        <dd style="color: blue; background: azure">За 5 зірковою шкалою</dd>
+        <dt style="color: darkslateblue; background: lightcyan">Пошук інформації</dt>
+        <dd style="color: blue; background: azure">За різними параметрами</dd>
+        <dt style="color: darkslateblue; background: lightcyan">Збір статистики</dt>
+        <dd style="color: blue; background: azure">Переглядів</dd>
+        <dd style="color: blue; background: azure">Вподобань</dd>
     </dl>
+</div>
+
+<div id="likes-video">
+    <video width="500" height="auto" controls>
+        <source src="files/likes.mp4" type="video/mp4">
+    </video>
 </div>
 
 <!--Financial section-->
@@ -145,7 +167,7 @@
             <td>2020</td>
             <td>670</td>
             <td>400</td>
-            <td>270</td>
+            <td style="background: yellow">270</td>
         </tr>
         <tr>
             <td>Вересень</td>
@@ -166,24 +188,27 @@
             <td>2020</td>
             <td>400</td>
             <td>400</td>
-            <td>0</td>
+            <td style="background: red">0</td>
         </tr>
         <tr>
             <td>Грудень</td>
             <td>2020</td>
             <td>800</td>
             <td>400</td>
-            <td>400</td>
+            <td style="background: yellow">400</td>
         </tr>
         <tr>
             <td>Січень</td>
-            <td>2021</td>
+            <td style="background: palegreen">2021</td>
             <td>500</td>
             <td>400</td>
             <td>100</td>
         </tr>
     </table>
 </div>
+
+<canvas id="canvas" width="800" height="400" border="1">
+</canvas>
 
 <!--Contacts section-->
 <div id="contacts">
@@ -193,16 +218,17 @@
         <fieldset>
             <legend>Форма запиту користувача</legend>
             <label for="surname">Прізвище</label>
-            <input id="surname" type="text" maxlength="30"><br>
+            <input id="surname" type="text" maxlength="30" tabindex="2" required><br>
             <label for="name">Ім'я</label>
-            <input id="name" type="text" maxlength="20"><br>
+            <input id="name" type="text" maxlength="20" autofocus tabindex="1"><br>
             <label for="patronymic">По-батькові</label>
             <input id="patronymic" type="text" maxlength="30" disabled><br>
             <label for="workplace">Місце роботи</label>
             <input id="workplace" type="text" maxlength="100" readonly><br>
 
             <label for="technical-support">Тип запиту</label>
-            <input id="technical-support" name="request-type" type="radio" value="technicalSupport" checked>Технічна підтримка
+            <input id="technical-support" name="request-type" type="radio" value="technicalSupport" checked
+                   tabindex="4">Технічна підтримка
             <input name="request-type" type="radio" value="customerSupport">Підтримка користувача
             <input name="request-type" type="radio" value="otherSupport">Інше<br>
 
@@ -214,7 +240,7 @@
             </select><br>
 
             <label for="request-text">Текст запиту </label><br>
-            <textarea id="request-text" name="text" cols="100" rows="10"></textarea><br>
+            <textarea id="request-text" name="text" cols="100" rows="10" tabindex="3"></textarea><br>
 
             <label for="request-date">Дата запиту </label><br>
             <input id="request-date" name="date" type="date"><br>
@@ -224,12 +250,28 @@
 
             <label for="user-experience">Стаж користувача</label><br>
             <input id="user-experience" name="user-experience" type="number" min="1" max="100"><br>
+
+            <label for="country">Країна</label><br>
+            <input type="text" id="country" name="country" pattern="[a-zA-Z]{3}"><br>
+
+            <label for="mail">Email</label><br>
+            <input type="email" id="mail" name="mail"><br>
+
+            <label for="priority">Пріоритетність запиту</label><br>
+            <input type="color" id="priority" name="priority" value="#0000ff"><br>
+
+            <label for="web-page">Веб-сторінка</label><br>
+            <input type="url" id="web-page" name="web-page"><br>
+
+            <p id="editable-p" contenteditable="">Текст в цьому елементі можна редагувати!</p>
+
+
         </fieldset>
         <input type="submit" value="Надіслати запит">
     </form>
 
     <details>
-        <summary >&copy; Krukovska, 2021</summary>
+        <summary>&copy; Krukovska, 2021</summary>
         <p>Цей сайт було створено студентом НауКМА Круковською Яною</p>
         <p>Для створення цього сайту було використано HTML</p>
     </details>
