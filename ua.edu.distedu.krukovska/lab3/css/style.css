@@ -1,3 +1,7 @@
+* {
+    margin: 10px 25px;
+}
+
 .large-font {
     font-size: 1.25em;
     background-color: #effcff;
@@ -28,10 +32,6 @@
     color: RGB(217, 0, 100);
 }
 
-body {
-    margin: 50px;
-}
-
 h3 {
     color: darkorange;
     background-color: #ffcd96;
@@ -45,3 +45,21 @@ h3 {
     border: 1px solid gold;
     box-shadow: 0 0 10px khaki;
 }
+
+nav ul li a {
+    font-size: 1.2em;
+    border: 1px solid red;
+    background-color: #ff9f9f;
+    color: darkred;
+}
+
+nav ul li a:visited {
+    background-color: #c2ff9f;
+    color: darkgreen;
+}
+
+nav ul li a:hover {
+    background-color: #fff7a7;
+    color: black;
+}
+
