@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+
+<!--Meta section-->
+<head>
+    <meta charset="UTF-8">
+    <title>Content Share</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        #services li {
+            color: blueviolet;
+            background: floralwhite;
+        }
+    </style>
+</head>
+
+<!--The main body of the page-->
+<body>
+<div id="header">
+    <img src="images/logo.png" alt="company-logo" width="200" height="200">
+    <h1>Content Share</h1>
+    <h2>Sharing is caring</h2>
+    <hr>
+    <blockquote>It takes a lot of courage to show your content to someone else</blockquote>
+</div>
+
+<div id="nav-block">
+    <!--Navigation section-->
+    <nav id="navigation">
+        <ul>
+            <li><a href="#company-info">Про нас</a></li>
+            <li><a href="#authority">Контролюючі органи</a></li>
+            <li><a href="#documents">Установчі документи</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#customers">Замовники</a></li>
+            <li><a href="#services-detailed">Послуги (детально)</a></li>
+            <li><a href="#finances">Фінансові показники</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <!--"Authorities section-->
+    <div id="authority">
+        <h3>Контролюючі органи</h3>
+        <a href="https://www.president.gov.ua">Президент України</a>
+        <a href="https://www.rada.gov.ua">Парламент</a>
+        <a href="https://www.ukma.edu.ua">НаУКМА</a>
+        <a href="https://kyivcity.gov.ua">КМДА</a>
+    </div>
+
+    <!--Documents section-->
+    <div id="documents">
+        <h3>Установчі документи</h3>
+        <a href="files/article-of-association.txt">Статут</a>
+        <a href="files/certificate.txt">Сертифікат</a>
+        <a href="files/contract.txt">Договір</a>
+    </div>
+</div>
+
+<div id="visual-media">
+    <!-- Iframe banner section -->
+    <div id="banner">
+        <p>
+            <iframe src="https://www.epam-group.ru/" width="500"></iframe>
+            <br>
+            Ваш браузер не підтримує елементи HTML5 :(
+        </p>
+    </div>
+
+    <div id="likes-video">
+        <video width="300" height="auto" controls>
+            <source src="files/likes.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<!--About us section-->
+<div id="company-info">
+    <h3>Про нас:</h3>
+    <p class="large-font"><u>Нашу компанію</u> було створено <b>21 січня 2020</b> і вона <i>одразу</i> набрала
+        популярності серед
+        користувачів мережі. <br> Дуже
+        швидко нею почали користуватися і знаменитості. За рік відбулося відкриття 1-ого офісу
+        <abbr title="Content Share">CS</abbr>, що розташований на вулиці
+        <mark>Фейкова 4 <sub>1/2</sub></mark>
+        та працює
+        кожного дня з 8<sup>00</sup> до 20<sup>00</sup></p>
+    <p class="middle-font">Ми займаємося підтримкою <em>середовища</em>, в якому користувачі можуть поширювати контент
+        <strong>будь-якого</strong> напрямку. Доступ до всіх можливостей є
+        <del>платним</del>
+        <ins>безкоштовним</ins>
+    </p>
+    <p id="small-font">Наша мета - полегшити поширення творчості та інформації</p>
+</div>
+
+<!--Figure section-->
+<figure>
+    <img src="images/likes.jpg" width="500" height="300" alt="Photo of likes"/>
+    <figcaption>Наша компанія полегшить отримання лайків</figcaption>
+</figure>
+
+<!--Working hours section-->
+<p>
+    <mark>Графік роботи офісу:</mark>
+    <time datetime="2021-01-01T08:00">8:00</time>
+    -
+    <time datetime="2021-12-31T20:00">20:00</time>
+</p>
+
+<div id="customers-services-block">
+    <!--Services section-->
+    <div id="services">
+        <h3>Послуги</h3>
+        <ul>
+            <li>Додавання контенту</li>
+            <li>Оцінювання контенту</li>
+            <li>Пошук інформації</li>
+            <li>Збір статистики</li>
+        </ul>
+    </div>
+
+    <!--Customers section-->
+    <div id="customers">
+        <h3>Наші замовники</h3>
+        <ol>
+            <li>Барак Обама</li>
+            <li>Олег Винник</li>
+            <li>Джо Байден</li>
+            <li>Джастін Бібер</li>
+        </ol>
+    </div>
+</div>
+
+<div id="audio-wolf">
+    <audio controls>
+        <source src="files/wolfynya.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<!--Detailed services section-->
+<div id="services-detailed">
+    <h3>Послуги (детально)</h3>
+    <dl>
+        <dt style="color: darkslateblue; background: lightcyan">Додавання контенту</dt>
+        <dd style="color: deepskyblue; background: azure">Тексту</dd>
+        <dd style="color: dodgerblue; background: azure">Відео</dd>
+        <dd style="color: blue; background: azure">Аудіо</dd>
+        <dt style="color: darkslategrey; background: lightcyan">Оцінювання контенту</dt>
+        <dd style="color: dimgrey; background: azure">За 5 зірковою шкалою</dd>
+        <dt style="color: darkmagenta; background: lightcyan">Пошук інформації</dt>
+        <dd style="color: blue; background: azure">За різними параметрами</dd>
+        <dt style="color: darkslategray; background: lightcyan">Збір статистики</dt>
+        <dd style="color: grey; background: azure">Переглядів</dd>
+        <dd style="color: darkgrey; background: azure">Вподобань</dd>
+    </dl>
+</div>
+
+<!--Financial section-->
+<div id="finances">
+    <h3>Фінансові показники</h3>
+    <table border="2" width="50%">
+        <caption>По місяцям за останні півроку</caption>
+        <tr>
+            <th colspan="2">Місяць</th>
+            <th>Доходи</th>
+            <th>Витрати</th>
+            <th>Прибуток</th>
+        </tr>
+        <tr>
+            <td>Серпень</td>
+            <td>2020</td>
+            <td>670</td>
+            <td>400</td>
+            <td style="background: yellow">270</td>
+        </tr>
+        <tr>
+            <td>Вересень</td>
+            <td>2020</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Жовтень</td>
+            <td>2020</td>
+            <td>900</td>
+            <td>700</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Листопад</td>
+            <td>2020</td>
+            <td>400</td>
+            <td>400</td>
+            <td style="background: red">0</td>
+        </tr>
+        <tr>
+            <td>Грудень</td>
+            <td>2020</td>
+            <td>800</td>
+            <td>400</td>
+            <td style="background: yellow">400</td>
+        </tr>
+        <tr>
+            <td>Січень</td>
+            <td style="background: palegreen">2021</td>
+            <td>500</td>
+            <td>400</td>
+            <td>100</td>
+        </tr>
+    </table>
+</div>
+
+<canvas id="canvas" width="800" height="400" style="border: 1px solid blue">
+</canvas>
+
+<!--Contacts section-->
+<div id="contacts">
+    <h3>Контакти</h3>
+
+    <form action="#" accept-charset="utf-8">
+        <fieldset>
+            <legend>Форма запиту користувача</legend>
+            <label for="surname">Прізвище</label>
+            <input id="surname" type="text" maxlength="30" tabindex="2" required><br>
+            <label for="name">Ім'я</label>
+            <!--
+                        <input id="name" type="text" maxlength="20" autofocus tabindex="1"><br>
+            -->
+            <input id="name" type="text" maxlength="20" tabindex="1"><br>
+            <label for="patronymic">По-батькові</label>
+            <input id="patronymic" type="text" maxlength="30" disabled><br>
+            <label for="workplace">Місце роботи</label>
+            <input id="workplace" type="text" maxlength="100" readonly><br>
+
+            <label for="technical-support">Тип запиту</label>
+            <input id="technical-support" name="request-type" type="radio" value="technicalSupport" checked
+                   tabindex="4">Технічна підтримка
+            <input name="request-type" type="radio" value="customerSupport">Підтримка користувача
+            <input name="request-type" type="radio" value="otherSupport">Інше<br>
+
+            <label for="user-type-select">Категорія користувача</label>
+            <select id="user-type-select">
+                <option name="user-type" value="guest" selected>Гість</option>
+                <option name="user-type" value="registered">Зареєстрований</option>
+                <option name="user-type" value="premium">Премуім-користувач</option>
+            </select><br>
+
+            <label for="request-text">Текст запиту </label><br>
+            <textarea id="request-text" name="text" cols="100" rows="10" tabindex="3"></textarea><br>
+
+            <label for="request-date">Дата запиту </label><br>
+            <input id="request-date" name="date" type="date"><br>
+
+            <label for="request-files">Вкладення</label><br>
+            <input id="request-files" name="files" type="file"><br>
+
+            <label for="user-experience">Стаж користувача</label><br>
+            <input id="user-experience" name="user-experience" type="number" min="1" max="100"><br>
+
+            <label for="country">Країна</label><br>
+            <input type="text" id="country" name="country" pattern="[a-zA-Z]{3}"><br>
+
+            <label for="mail">Email</label><br>
+            <input type="email" id="mail" name="mail"><br>
+
+            <label for="priority">Пріоритетність запиту</label><br>
+            <input type="color" id="priority" name="priority" value="#0000ff"><br>
+
+            <label for="web-page">Веб-сторінка</label><br>
+            <input type="url" id="web-page" name="web-page"><br>
+
+            <p id="editable-p" contenteditable="true">Текст в цьому елементі можна редагувати!</p>
+
+        </fieldset>
+        <input type="submit" value="Надіслати запит">
+        <input id="cancel-button" type="submit" value="Відміна">
+        <input id="save-button" type="submit" value="Зберегти" disabled>
+    </form>
+
+    <details>
+        <summary>&copy; Krukovska, 2021</summary>
+        <p>Цей сайт було створено студентом НауКМА Круковською Яною</p>
+        <p>Для створення цього сайту було використано HTML</p>
+    </details>
+    <a href="mailto:mail@mail.ua">Напишіть нам</a>
+</div>
+
+<div id="overflow-sample">
+    <p>
+        Я міг би прожити на хлібі й воді
+        В пустелі, чи в горах, віддавшись меті
+        Без гаджетів, кави, комфорту, тепла
+        Без брендових лахів, без кола і двора
+        Але як, я зміг би жити без тебе?
+        Скажи як, я зміг би жити без тебе?
+        Ти дала мені свої ангельські крила
+        Я лечу над світом, немов, білий птах!
+        Я люблю! І мені вистачить сили
+        Все життя носити тебе на руках!
+        Я міг прожити без віскі й вина
+        Без довгого сну, дорогого майна
+        Без синього моря, без гарних доріг
+        Без доброго слова, без рук і без ніг
+        Але як, я зміг би жити без тебе?
+        Скажи як, я зміг би жити без тебе?
+        Ти дала мені свої ангельські крила
+        Я лечу над світом, немов, білий птах!
+        Я люблю! І мені вистачить сили
+        Все життя носити тебе на руках
+        Ти дала мені свої ангельські крила
+        Я лечу над світом, немов, білий птах!
+        Я люблю! І мені вистачить сили
+        Все життя носити тебе на руках!
+    </p>
+</div>
+
+<div id="picture-background">
+    <p>
+        You know you love me, I know you care, Just shout whenever and I’ll be there
+        You want my love, you want my heart and we will never, ever, ever be apart
+        Are we an item? Girl, quit playing. We’re just friends, what are you saying?
+        Said "There's another," and looked right in my eyes my first love broke my heart for the first time, and I was
+        like...
+
+        Baby, baby, baby oh Like baby, baby, baby no Like baby, baby, baby no oh
+        Thought you'd always be mine, mine Baby, baby, baby oh Like baby, baby, baby no
+        Like baby, baby, baby no oh Thought you’d always be mine, mine
+
+        Oh, for you I would have done whatever And I just can’t believe we ain't together
+        And I wanna play it cool, but I'm losing you I'll buy you anything, I'll buy you any ring
+        And I'm in pieces, baby, fix me And just shake me 'til you wake me from this bad dream
+        I'm going down, down, down, down And I just can’t believe my first love won’t be around, and I'm like...
+    </p></div>
+
+<div id="newspaper-style">
+    <p>Падав безжалісно град, била блискавиця, нріла під серцем вовчат молода вовчиця,
+        Знаю про вірну любов, лісове озерце, плаче нічної пори Одиноке серце</p>
+    <p>Зорі прозорі вгорі, вам спиться, чи не спиться? Вила на місяць новий молода вовчиця,
+        Вірила, там угорі хтось її почує, як її пахне любов знов вона відчує</p>
+    <p>Зграю тримала в зубах степова цариця, Вічно наводила страх удова-вовчиця,
+        В небі з'явилося знов місяця люстерце, Бачить свою там любов одиноке серце</p>
+    <p>Зорі прозорі вгорі, вам спиться, чи не спиться? Вила на місяць новий молода вовчиця,
+        Вірила, там угорі хтось її почує, Як її пахне любов знов вона відчує</p>
+    <p>Зорі прозорі вгорі, вам спиться, чи не спиться? Вила на місяць новий молода вовчиця,
+        Вірила, там угорі хтось її почує, Як її пахне любов знов вона відчує</p>
+    <p>Зорі прозорі вгорі, вам спиться, чи не спиться? Вила на місяць новий молода вовчиця,
+        Вірила, там угорі хтось її почує, Як її пахне любов знов вона відчує</p>
+</div>
+
+<div id="font-sample">
+    Ти, розлюбила мене, мила...
+    Навіки я тебе люблю.
+    Як нам прийшла пора прощатись,
+    Піду на річку – і втоплюсь.
+
+    Скінчилось кохання, скінчилося все,
+    Заглядає сонце у вікна осель.
+    Там люди щасливі та сумно мені,
+    Мабуть утоплюся, спочину на дні.
+
+    <img src="images/river-drown.jpg" alt="andriy-mykolaichuk" class="image-in-text">
+
+    Піду втоплюся у річці глибокій,
+    Шукати стануть – не скоро знайдуть.
+    Ти будеш плакать – спливатимуть роки,
+    Мене до смерті не зможеш забуть.
+
+    Життя, як той камінь, на груди лягло.
+    Зроблю, що надумав Марічці на зло.
+    Прощай, мамо люба, і тато, прощай,
+    Учителька, друзі, прощай, милий край!
+
+    А річка страшною, мов відьма, була.
+    Відходи заводу у море несла.
+    Я річку шукати чистеньку піду –
+    Шукатиму доти, поки не знайду.
+</div>
+
+<h3 id="text-shadow-sample">Тестуємо CSS разом з нами!</h3>
+
+<div id="background-sample">
+    <div>
+        <p>
+            Чи я ж не українець, не козак?
+            І до смачної страви не мастак?
+            Багато я чого у світі їв,
+            А до макітри серцем прикипів.
+            Бо розляглися в ній на всі смаки
+            Вареники! Вареники!
+            Варенички мої, варенички мої,
+            Варенички мої у сметані!
+            Варенички мої, варенички мої,
+            Варенички мої кохані.
+            І дух в мені козацький ожива,
+            І варить круто-мудро голова.
+            Пузаті розлітаються думки,
+            А в них одні жінки, одні жінки!
+            Пливе в сметані серденько моє,
+            І розстає, і розстає.
+            Вареники! Вареники!
+            Варенички мої, варенички мої,
+            Варенички мої у сметані!
+            Варенички мої, варенички мої,
+            Варенички мої кохані.
+        </p>
+    </div>
+    <div>
+        <p>
+            Tylko jedno w głowie mam Koksu pięć gram odlecieć sam
+            W krainę zapomnienia W głowie myśli mam
+            Kiedy skończy się ten stan Gdy już nie będę sam
+            Bo wjedzie biały węgorz Tylko jedno w głowie mam
+            Koksu pięć gram odlecieć sam W krainę zapomnienia
+            W głowie myśli mam Kiedy skończy się ten stan
+            Gdy już nie będę sam Bo wjedzie biały węgorz
+
+            Tylko jedno w głowie mam Koksu pięć gram odlecieć sam
+            W krainę zapomnienia W głowie myśli mam
+            Kiedy skończy się ten stan Gdy już nie będę sam
+            Bo wjedzie biały węgorz Tylko jedno w głowie mam
+            Koksu pięć gram odlecieć sam W krainę zapomnienia
+            W głowie myśli mam Kiedy skończy się ten stan
+            Gdy już nie będę sam Bo wjedzie biały węgorz
+
+            Tylko jedno w głowie mam Koksu pięć gram odlecieć sam
+            W krainę zapomnienia W głowie myśli mam
+            Kiedy skończy się ten stan Gdy już nie będę sam
+            Bo wjedzie biały węgorz Tylko jedno w głowie mam
+            Koksu pięć gram odlecieć sam W krainę zapomnienia
+            W głowie myśli mam Kiedy skończy się ten stan
+            Gdy już nie będę sam Bo wjedzie biały węgorz
+        </p>
+    </div>
+    <div>
+        <p>
+            Я стояв на порозі – на порозі життя молодого,
+            Я окрилений був, наче той сизокрилий орел
+            І казав мені батько: "Щоб не збитися, синку, з дороги,
+            Ти іди від джерел, ти іди від джерел до джерел."
+            Юний орел, юний орел!
+            Ти іди від джерел, до джерел, до джерел!
+            І пішов я натхнений за джерельною тою водою.
+            Не плутав, не блукав крізь тумани ішов навпростець
+            І зустрів своє щастя, і знайшов свою пісню і долю,
+            Ідучи від сердець, ідучи від сердець до сердець.
+            Я іду по дорозі, за плечима минулі тривоги,
+            А за мною ідуть вже нової весни співаки.
+            Коли сонце згасає, щоб не збитися іншим з дороги,
+            Моє сиве безсоння запалює нові зірки.
+            До сердець! Юний орел! Юний орел!
+            Ти іди від джерел до джерел! До джерел!
+        </p>
+    </div>
+</div>
+
+<div id="block-translate">
+    <p>This is sample text to test translate()</p>
+</div>
+<div id="block-rotate">
+    <p>Testing rotating feature</p>
+</div>
+<div id="block-scale">
+    <p>This is where you can see how scaling works</p>
+</div>
+<div id="hover-change"></div>
+</body>
+</html>
