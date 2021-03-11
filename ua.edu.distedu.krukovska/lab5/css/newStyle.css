@@ -1,0 +1,375 @@
+/* Задає стиль усім посиланням-елементам списку ul, що міститься в nav */
+nav ul li a {
+    font-size: 1.2em;
+    border: 1px solid #be9b7b;
+    background-color: #fff4e6;
+    color: #4b3832;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    border: 1px solid #be9b7b;
+    background-color: #fff4e6;
+    color: #4b3832;
+}
+
+nav ul li a:visited {
+    background-color: #854442;
+    color: #4b3832;
+}
+
+nav ul li a:hover {
+    background-color: #be9b7b;
+    color: #3c2f2f;
+}
+
+.class-0, .class-1, .class-2, .class-3 {
+    margin: 50px;
+    padding: 10px;
+    border: 2px solid #4b3832;
+}
+
+.class-1 {
+    background-color: #fff4e6;
+}
+
+.class-2 {
+    background-color: #be9b7b;
+}
+
+.class-3 {
+    background-color: #854442;
+}
+
+/* Присвоює певні поля кожному елементу сторінки */
+* {
+    margin: 10px 25px;
+}
+
+/* Задає параметри класу large-font */
+.large-font {
+    font-size: 1.25em;
+    background-color: #fff4e6;
+}
+
+/* Задає параметри класу middle-font */
+.middle-font {
+    font-size: 18px;
+    background-color: #fff4e6;
+}
+
+/* Задає параметри ідентифікатору small-font */
+#small-font {
+    font-size: 90%;
+    background-color: #fff4e6;
+}
+
+/* Змінює перші літери кожного параграфу р, що є всередині індентифікатора company-info */
+#company-info p:first-letter {
+    font-size: 150%;
+    color: #854442;
+}
+
+/* Задає стиль всім посиланням в блоці ідентифікатора authority */
+#authority a {
+    color: #be9b7b;
+    opacity: 70%;
+}
+
+/* Задає стиль всім посиланням в блоці ідентифікатора authority, що містять у собі "gov.ua" */
+#authority a[href*="gov.ua"] {
+    font-weight: bold;
+    color: #4b3832;
+}
+
+/* Задає стиль усім заголовкам H3 на сторінці */
+h3 {
+    color: #4b3832;
+    background-color: #fff4e6;
+}
+
+/* Задає стиль комірок таблиці у div з індентифікатором finances */
+#finances td {
+    background-color: #fff4e6;
+}
+
+/* Задає стиль блоку з індентифікатором customers */
+#customers {
+    border: 1px solid #be9b7b;
+    box-shadow: 0 0 10px #fff4e6;
+}
+
+/* Об'єднує навігацію, контролюючі органи та документи */
+#nav-block {
+    padding: 2px;
+    margin: 0 0;
+    border: 5px solid #be9b7b;
+    overflow: hidden;
+}
+
+/* Забезпечує відображення навігації на одному рядку в колонках */
+#nav-block > * {
+    float: left;
+}
+
+/* Об'єднує послуги та та замовників */
+#customers-services-block {
+    padding: 5px 15%;
+    margin: 5px 150px;
+    border: 5px solid #be9b7b;
+    overflow: hidden;
+}
+
+/* Забезпечує відображення замовників та послуг на одному рядку в колонках */
+#customers-services-block > * {
+    float: left;
+}
+
+/* Об'єднує відео та iframe */
+#visual-media {
+    padding: 5px 100px;
+    margin: 5px 50px;
+    border: 2px dashed #fff4e6;
+    overflow: hidden;
+}
+
+/* Забезпечує відображення відео та фрейму на одному рядку в колонках */
+#visual-media > * {
+    float: left;
+}
+
+/* Додає прокручування до тексту */
+#overflow-sample {
+    margin: 1% 20%;
+    padding: 5px 15px;
+    height: 100px;
+    width: 700px;
+    overflow: auto;
+    border: 1px solid #3c2f2f;
+}
+
+/* Встановлює фото на фон тексту */
+#picture-background {
+    margin: 3% 20%;
+    padding: 10px;
+    border: 1px solid #854442;
+    width: 700px;
+    color: #3c2f2f;
+    background-image: url("https://t4.ftcdn.net/jpg/02/86/18/21/360_F_286182178_CsReLGXEhZbLMO6wnkpDW5kfcgW58o6A.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Відображення довгого тексту у 4 колонках у стилі газети */
+#newspaper-style {
+    margin: 50px;
+    padding: 5px 5px;
+    border: 1px dotted #4b3832;
+    column-count: 4;
+    text-align: justify;
+}
+
+/* Режим кнопки "скасування" - "включено" */
+#cancel-button:enabled {
+    background-color: #be9b7b;
+}
+
+/* Режим кнопки "скасування" - "вимкнено" */
+#cancel-button:disabled {
+    background-color: #fff4e6;
+}
+
+/* Режим кнопки "зберегти" - "включено" */
+#save-button:enabled {
+    background-color: #be9b7b;
+}
+
+/* Режим кнопки "зберегти" - "вимкнено" */
+#save-button:disabled {
+    background-color: #fff4e6;
+}
+
+/* Підключення шрифту */
+@font-face {
+    font-family: 'Reggae One', cursive;
+    src: url('../files/fonts/ReggaeOne-Regular.ttf');
+}
+
+/* Блок з текстом з підключеним шрифтом */
+#font-sample {
+    margin: 20px 20%;
+    padding: 20px 10px;
+    border: 1px dotted #4b3832;
+    font-size: 20px;
+    max-width: 900px;
+    text-align: justify;
+    font-family: 'Reggae One', cursive;
+}
+
+/* Налаштування фото, яке обтікає текст */
+.image-in-text {
+    width: 350px;
+    float: right;
+    margin: 10px 5px 10px 15px;
+}
+
+/* Розмита тінь тексту */
+#text-shadow-sample {
+    text-shadow: 1px 1px 2px #3c2f2f;
+}
+
+/* Блок з кількома абзацами */
+#background-sample {
+    text-align: justify;
+    overflow: hidden;
+    margin: 45px;
+    padding: 15px 10px;
+    border: 2px double #be9b7b;
+    justify-content: center;
+}
+
+/* Розподілення абзаців по колонкам */
+#background-sample > * {
+    margin: 15px 25px;
+    padding: 5px 10px;
+    width: 350px;
+    float: left;
+    border: 1px dashed #3c2f2f;
+}
+
+/* Першому абзацу заокруглює кути, встановлює колір фону */
+#background-sample div:nth-child(1) {
+    background-color: linen;
+    border-radius: 50px;
+}
+
+/* Другому абзацу встановлює на фон фото, яке повторює */
+#background-sample div:nth-child(2) {
+    background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/79/79aa1385a61bd6d47084ac1a78595638eb97ecde_full.jpg');
+    background-repeat: repeat;
+}
+
+/* Третьому абзацу встановлює фон - градієнт */
+#background-sample div:nth-child(3) {
+    background: -webkit-linear-gradient(#4b3832, #be9b7b, #fff4e6);
+}
+
+/* Блок для переміщення в звичайному стані */
+#block-translate {
+    border: 1px groove #4b3832;
+}
+
+/* Блок для переміщення при наведені курсору */
+#block-translate:hover {
+    transform: translate(0, -10px);
+}
+
+/* Блок для повертання в звичайному стані */
+#block-rotate {
+    border: 5px ridge #be9b7b;
+}
+
+/* Блок для повертання при наведені курсору */
+#block-rotate:hover {
+    transform: rotate(10deg);
+}
+
+/* Блок для масштабування в звичайному стані */
+#block-scale {
+    border: 1px outset #4b3832;
+}
+
+/* Блок для масштабування при наведені курсору */
+#block-scale:hover {
+    transform: scale(1.1);
+}
+
+/* Кольорий блок в звичайному стані */
+#hover-change {
+    margin: 10% 25%;
+    padding: 2%;
+    border-style: dotted dashed solid double;
+    width: 200px;
+    height: 200px;
+    background-color: #4b3832;
+    border-radius: 50px;
+}
+
+/* Кольорий блок при наведені курсором */
+#hover-change:hover {
+    background-color: #fff4e6;
+    width: 500px;
+}
+
+/* Адаптивний дизайн */
+@media only screen and (max-width: 768px) {
+    div {
+        width: 100%;
+    }
+
+    #gallery .gallery-image img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* Галерея */
+#gallery {
+    width: 100%;
+    margin: 2%;
+}
+
+/* Ширина зображень галереї */
+#gallery .gallery-image {
+    width: 25%;
+}
+
+/* Ширана фото */
+.gallery-image img {
+    width: 100%;
+}
+
+.gallery-image {
+    float: left;
+}
+
+/* Блоку текту над картинкою */
+.gallery-image .image-text {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    color: #fff4e6;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+/* Фон заголовку на картинкою */
+.image-text h2 {
+    color: #3c2f2f;
+    background-color: #fff4e6;
+    opacity: 0.5;
+}
+
+/* Збільшення першого зображення галереї */
+#gallery .gallery-image:nth-of-type(1):hover {
+    transform: scale(1.1);
+}
+
+/* Поворот другого зображення галереї */
+#gallery .gallery-image:nth-of-type(2):hover {
+    transform: rotate(10deg);
+}
+
+/* Зміна третього зображення галереї */
+#gallery .gallery-image:nth-of-type(3):hover img {
+    content: url('../images/replace-image.jpg');
+}
+
+/* Поява тексту на картинці при наведені тексту */
+.gallery-image:hover .image-text {
+    display: block;
+}
+

@@ -76,17 +76,20 @@ nav ul li a:hover {
     color: black;
 }
 
+/* Об'єднує навігацію, контролюючі органи та документи */
 #nav-block {
-    padding: 2px 2px;
+    padding: 2px;
     margin: 0 0;
     border: 5px solid pink;
     overflow: hidden;
 }
 
+/* Забезпечує відображення навігації на одному рядку в колонках */
 #nav-block > * {
     float: left;
 }
 
+/* Об'єднує послуги та та замовників */
 #customers-services-block {
     padding: 5px 15%;
     margin: 5px 150px;
@@ -94,10 +97,12 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+/* Забезпечує відображення замовників та послуг на одному рядку в колонках */
 #customers-services-block > * {
     float: left;
 }
 
+/* Об'єднує відео та iframe */
 #visual-media {
     padding: 5px 100px;
     margin: 5px 50px;
@@ -105,10 +110,12 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+/* Забезпечує відображення відео та фрейму на одному рядку в колонках  */
 #visual-media > * {
     float: left;
 }
 
+/* Додає прокручування до тексту */
 #overflow-sample {
     margin: 1% 20%;
     padding: 5px 15px;
@@ -118,9 +125,10 @@ nav ul li a:hover {
     border: 1px solid black;
 }
 
+/* Встановлює фото на фон тексту */
 #picture-background {
     margin: 3% 20%;
-    padding: 10px 10px;
+    padding: 10px;
     border: 1px solid coral;
 
     width: 700px;
@@ -130,8 +138,9 @@ nav ul li a:hover {
     background-repeat: no-repeat;
 }
 
+/* Відображення довгого тексту у 4 колонках у стилі газети */
 #newspaper-style {
-    margin: 50px 50px;
+    margin: 50px;
     padding: 5px 5px;
     border: 1px dotted #3f00ab;
 
@@ -139,27 +148,33 @@ nav ul li a:hover {
     text-align: justify;
 }
 
+/* Режим кнопки "скасування" - "включено" */
 #cancel-button:enabled {
     background-color: red;
 }
 
+/* Режим кнопки "скасування" - "вимкнено" */
 #cancel-button:disabled {
     background-color: palevioletred;
 }
 
+/* Режим кнопки "зберегти" - "включено" */
 #save-button:enabled {
     background-color: lawngreen;
 }
 
+/* Режим кнопки "зберегти" - "вимкнено" */
 #save-button:disabled {
     background-color: lightgreen;
 }
 
+/* Підключення шрифту */
 @font-face {
     font-family: 'Reggae One', cursive;
     src: url('../fonts/ReggaeOne-Regular.ttf')
 }
 
+/* Блок з текстом з підключеним шрифтом */
 #font-sample {
     margin: 20px 20%;
     padding: 20px 10px;
@@ -171,26 +186,30 @@ nav ul li a:hover {
     font-family: 'Reggae One', cursive;
 }
 
+/* Налаштування фото, яке обтікає текст */
 .image-in-text {
     width: 350px;
     float: right;
-    margin: 5px 10px 0 10px;
+    margin: 10px 5px 10px 15px;
 }
 
+/* Розмита тінь тексту */
 #text-shadow-sample {
-    text-shadow: 1px 1px 1px #993c00;
+    text-shadow: 1px 1px 2px #993c00;
 }
 
+/* Блок з кількома абзацами */
 #background-sample {
     text-align: justify;
     overflow: hidden;
 
-    margin: 45px 45px;
+    margin: 45px;
     padding: 15px 10px;
     border: 2px double olive;
     justify-content: center;
 }
 
+/* Розподілення абзаців по колонкам */
 #background-sample > * {
     margin: 15px 25px;
     padding: 5px 10px;
@@ -199,50 +218,60 @@ nav ul li a:hover {
     border: 1px dashed red;
 }
 
+/* Першому абзацу заокруглює кути, встановлює колір фону */
 #background-sample div:nth-child(1) {
     background-color: linen;
     border-radius: 50px;
 }
 
+/* Другому абзацу встановлює на фон фото, яке повторює */
 #background-sample div:nth-child(2) {
     background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/79/79aa1385a61bd6d47084ac1a78595638eb97ecde_full.jpg');
     background-repeat: repeat;
 }
 
+/* Третьому абзацу встановлює фон - градієнт */
 #background-sample div:nth-child(3) {
     background: -webkit-linear-gradient(top, red, orange, yellow, green, lightblue, blue, purple);
 }
 
+/* Блок для переміщення в звичайному стані */
 #block-translate {
     margin: 2% 10%;
     padding: 13px;
     border: 1px groove #40ff00;
 }
 
+/* Блок для переміщення при наведені курсору */
 #block-translate:hover {
-    transform: translate(0, -5px);
+    transform: translate(0, -10px);
 }
 
+/* Блок для повертання в звичайному стані */
 #block-rotate {
     margin: 5% 8%;
     padding: 10px;
     border: 5px ridge #fffe70;
 }
 
+/* Блок для повертання при наведені курсору */
 #block-rotate:hover {
     transform: rotate(10deg);
 }
 
+/* Блок для масштабування в звичайному стані */
 #block-scale {
     margin: 3% 6%;
     padding: 9px;
     border: 1px outset #c60000;
 }
 
+/* Блок для масштабування при наведені курсору */
 #block-scale:hover {
     transform: scale(1.1);
 }
 
+/* Кольорий блок в звичайному стані */
 #hover-change {
     margin: 10% 25%;
     padding: 2%;
@@ -253,6 +282,7 @@ nav ul li a:hover {
     background-color: red;
 }
 
+/* Кольорий блок при наведені курсором */
 #hover-change:hover {
     background-color: blue;
     width: 500px;

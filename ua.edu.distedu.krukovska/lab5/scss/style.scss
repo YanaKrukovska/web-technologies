@@ -1,0 +1,391 @@
+$dark-brown-color: #4b3832;
+$brown-color: #854442;
+$light-color: #fff4e6;
+$dark-color: #3c2f2f;
+$middle-color: #be9b7b;
+
+$border-radius-value: 50px;
+
+@mixin border-radius($value) {
+  border-radius: $value;
+}
+
+nav {
+  ul {
+    li {
+      a {
+        font-size: 1.2em;
+        border: 1px solid $middle-color;
+        background-color: $light-color;
+        color: $dark-brown-color;
+      }
+
+      a:visited {
+        background-color: $brown-color;
+        color: $dark-brown-color;
+      }
+
+      a:hover {
+        background-color: $middle-color;
+        color: $dark-color;
+      }
+    }
+  }
+}
+
+.class-0 {
+  margin: 50px;
+  padding: 10px;
+  border: 2px solid $dark-brown-color
+}
+
+.class-1 {
+  @extend .class-0;
+  background-color: $light-color;
+}
+
+.class-2 {
+  @extend .class-0;
+  background-color: $middle-color;
+}
+
+.class-3 {
+  @extend .class-0;
+  background-color: $brown-color;
+}
+
+/* Присвоює певні поля кожному елементу сторінки */
+* {
+  margin: 10px 25px;
+}
+
+/* Задає параметри класу large-font */
+.large-font {
+  font-size: 1.25em;
+  background-color: $light-color;
+}
+
+/* Задає параметри класу middle-font */
+.middle-font {
+  font-size: 18px;
+  background-color: $light-color;
+}
+
+/* Задає параметри ідентифікатору small-font */
+#small-font {
+  font-size: 90%;
+  background-color: $light-color;
+}
+
+/* Змінює перші літери кожного параграфу р, що є всередині індентифікатора company-info */
+#company-info p:first-letter {
+  font-size: 150%;
+  color: $brown-color;
+}
+
+/* Задає стиль всім посиланням в блоці ідентифікатора authority */
+#authority a {
+  color: #be9b7b;
+  opacity: 70%;
+}
+
+/* Задає стиль всім посиланням в блоці ідентифікатора authority, що містять у собі "gov.ua" */
+#authority a[href*="gov.ua"] {
+  font-weight: bold;
+  color: #4b3832;
+}
+
+/* Задає стиль усім заголовкам H3 на сторінці */
+h3 {
+  color: $dark-brown-color;
+  background-color: $light-color;
+}
+
+/* Задає стиль комірок таблиці у div з індентифікатором finances */
+#finances td {
+  background-color: $light-color;
+}
+
+/* Задає стиль блоку з індентифікатором customers */
+#customers {
+  border: 1px solid $middle-color;
+  box-shadow: 0 0 10px $light-color;
+}
+
+/* Об'єднує навігацію, контролюючі органи та документи */
+#nav-block {
+  padding: 2px;
+  margin: 0 0;
+  border: 5px solid $middle-color;
+  overflow: hidden;
+}
+
+/* Забезпечує відображення навігації на одному рядку в колонках */
+#nav-block > * {
+  float: left;
+}
+
+/* Об'єднує послуги та та замовників */
+#customers-services-block {
+  padding: 5px 15%;
+  margin: 5px 150px;
+  border: 5px solid $middle-color;
+  overflow: hidden;
+}
+
+/* Забезпечує відображення замовників та послуг на одному рядку в колонках */
+#customers-services-block > * {
+  float: left;
+}
+
+/* Об'єднує відео та iframe */
+#visual-media {
+  padding: 5px 100px;
+  margin: 5px 50px;
+  border: 2px dashed $light-color;
+  overflow: hidden;
+}
+
+/* Забезпечує відображення відео та фрейму на одному рядку в колонках  */
+#visual-media > * {
+  float: left;
+}
+
+/* Додає прокручування до тексту */
+#overflow-sample {
+  margin: 1% 20%;
+  padding: 5px 15px;
+  height: 100px;
+  width: 700px;
+  overflow: auto;
+  border: 1px solid $dark-color;
+}
+
+/* Встановлює фото на фон тексту */
+#picture-background {
+  margin: 3% 20%;
+  padding: 10px;
+  border: 1px solid $brown-color;
+
+  width: 700px;
+  color: $dark-color;
+  background-image: url("https://t4.ftcdn.net/jpg/02/86/18/21/360_F_286182178_CsReLGXEhZbLMO6wnkpDW5kfcgW58o6A.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Відображення довгого тексту у 4 колонках у стилі газети */
+#newspaper-style {
+  margin: 50px;
+  padding: 5px 5px;
+  border: 1px dotted $dark-brown-color;
+
+  column-count: 4;
+  text-align: justify;
+}
+
+/* Режим кнопки "скасування" - "включено" */
+#cancel-button:enabled {
+  background-color: $middle-color;
+}
+
+/* Режим кнопки "скасування" - "вимкнено" */
+#cancel-button:disabled {
+  background-color: $light-color;
+}
+
+/* Режим кнопки "зберегти" - "включено" */
+#save-button:enabled {
+  background-color: $middle-color;
+}
+
+/* Режим кнопки "зберегти" - "вимкнено" */
+#save-button:disabled {
+  background-color: $light-color;
+}
+
+/* Підключення шрифту */
+@font-face {
+  font-family: 'Reggae One', cursive;
+  src: url('../files/fonts/ReggaeOne-Regular.ttf')
+}
+
+/* Блок з текстом з підключеним шрифтом */
+#font-sample {
+  margin: 20px 20%;
+  padding: 20px 10px;
+  border: 1px dotted $dark-brown-color;
+
+  font-size: 20px;
+  max-width: 900px;
+  text-align: justify;
+  font-family: 'Reggae One', cursive;
+}
+
+/* Налаштування фото, яке обтікає текст */
+.image-in-text {
+  width: 350px;
+  float: right;
+  margin: 10px 5px 10px 15px;
+}
+
+/* Розмита тінь тексту */
+#text-shadow-sample {
+  text-shadow: 1px 1px 2px $dark-color;
+}
+
+/* Блок з кількома абзацами */
+#background-sample {
+  text-align: justify;
+  overflow: hidden;
+
+  margin: 45px;
+  padding: 15px 10px;
+  border: 2px double $middle-color;
+  justify-content: center;
+}
+
+/* Розподілення абзаців по колонкам */
+#background-sample > * {
+  margin: 15px 25px;
+  padding: 5px 10px;
+  width: 350px;
+  float: left;
+  border: 1px dashed $dark-color;
+}
+
+/* Першому абзацу заокруглює кути, встановлює колір фону */
+#background-sample div:nth-child(1) {
+  background-color: linen;
+  @include border-radius($border-radius-value);
+}
+
+/* Другому абзацу встановлює на фон фото, яке повторює */
+#background-sample div:nth-child(2) {
+  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/79/79aa1385a61bd6d47084ac1a78595638eb97ecde_full.jpg');
+  background-repeat: repeat;
+}
+
+/* Третьому абзацу встановлює фон - градієнт */
+#background-sample div:nth-child(3) {
+  background: -webkit-linear-gradient($dark-brown-color, $middle-color, $light-color);
+}
+
+/* Блок для переміщення в звичайному стані */
+#block-translate {
+  border: 1px groove $dark-brown-color;
+}
+
+/* Блок для переміщення при наведені курсору */
+#block-translate:hover {
+  transform: translate(0, -10px);
+}
+
+/* Блок для повертання в звичайному стані */
+#block-rotate {
+  border: 5px ridge $middle-color;
+}
+
+/* Блок для повертання при наведені курсору */
+#block-rotate:hover {
+  transform: rotate(10deg);
+}
+
+/* Блок для масштабування в звичайному стані */
+#block-scale {
+  border: 1px outset $dark-brown-color;
+}
+
+/* Блок для масштабування при наведені курсору */
+#block-scale:hover {
+  transform: scale(1.1);
+}
+
+/* Кольорий блок в звичайному стані */
+#hover-change {
+  margin: 10% 25%;
+  padding: 2%;
+  border-style: dotted dashed solid double;
+
+  width: 200px;
+  height: 200px;
+  background-color: $dark-brown-color;
+
+  @include border-radius($border-radius-value);
+}
+
+/* Кольорий блок при наведені курсором */
+#hover-change:hover {
+  background-color: $light-color;
+  width: 500px;
+}
+
+/* Адаптивний дизайн */
+@media only screen and (max-width: 768px) {
+  div {
+    width: 100%;
+  }
+
+  #gallery {
+    width: 100%;
+  }
+}
+
+/* Галерея */
+#gallery {
+  width: 100%;
+  margin: 2%;
+}
+
+/* Ширина зображень галереї */
+#gallery .gallery-image {
+  width: 25%;
+}
+
+/* Ширана фото */
+.gallery-image img {
+  width: 100%;
+}
+
+.gallery-image {
+  float: left;
+}
+
+/* Блоку текту над картинкою */
+.image-text {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  color: #fff4e6;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  width: fit-content;
+}
+
+/* Фон заголовку на картинкою */
+.image-text h2 {
+  color: $brown-color;
+  background-color: $light-color;
+  opacity: 0.5;
+}
+
+/* Збільшення першого зображення галереї */
+#gallery .gallery-image:nth-of-type(1):hover {
+  transform: scale(1.1);
+}
+
+/* Поворот другого зображення галереї */
+#gallery .gallery-image:nth-of-type(2):hover {
+  transform: rotate(10deg);
+}
+
+/* Зміна третього зображення галереї */
+#gallery .gallery-image:nth-of-type(3):hover img {
+  content: url('../images/replace-image.jpg');
+}
+
+/* Поява тексту на картинці при наведені тексту */
+.gallery-image:hover .image-text {
+  display: block;
+}
