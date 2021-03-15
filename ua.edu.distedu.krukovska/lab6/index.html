@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript task</title>
+    <script src="task.js"></script>
+</head>
+<body>
+
+<h2>Reverse: зміна порядку символів у рядку на протилежний</h2>
+<form name="reverseForm">
+    <label> Введіть рядок: <input id="reverseInput" name="reverseInput" type="text" minlength="1"></label>
+    <button type="button" onclick="callReverse()">Reverse</button>
+    <p id="reverseRes"></p>
+</form>
+
+<h2>Fibonacci: розрахунок чисел фібоначі до N-ого числа</h2>
+<form name="fibonacciForm">
+    <label> Введіть N: <input id="fibonacciInput" type="number" min="3"></label>
+    <button type="button" onclick="callFibonacci()">Find fibonacci</button>
+    <table id="resTable" style="border: 2px solid black">
+        <thead>
+        <tr>
+            <th scope="col">Fn</th>
+            <th scope="col">Result</th>
+        </tr>
+        </thead>
+        <tbody id="resBody">
+        </tbody>
+    </table>
+</form>
+
+<h2>Square: знаходження площі квадрата з діагоналлю N</h2>
+<form name="squareForm">
+    <label> Введіть діагональ: <input id="squareInput" name="squareInput" type="number" min="1"></label>
+    <button type="button" onclick="callSquare()">Find square</button>
+    <p id="squareRes"></p>
+</form>
+
+<h2>Trains: запити до потягів </h2>
+<form name="trainForm">
+    <label> Введіть напрям: <input id="trainDestInput" name="trainDestInput" type="text"></label>
+    <button type="button" onclick="callTrainDestination()">Поїзди що прямують до заданого пункту призначення</button>
+    <ul id="trainDestRes"></ul>
+
+    <label> Введіть напрям: <input id="trainDestTimeInput" name="trainDestTimeInput" type="text"></label>
+    <label> Введіть час: <input id="trainTimeInput" name="trainTimeInput" type="time"></label>
+    <button type="button" onclick="callTrainDestTime()">Поїзди, що прямують до заданного пункту призначення і
+        вирушають після заданої години
+    </button>
+    <ul id="trainDestTimeRes"></ul>
+
+    <label> Введіть напрям: <input id="trainSeatsInput" name="trainSeatsInput" type="text"></label>
+    <button type="button" onclick="callSeatsTrains()">Поїзди, що відправляються до заданого пункту призначення і мають
+        плацкартні місця
+    </button>
+    <ul id="trainSeatsRes"></ul>
+</form>
+<script>
+    function callReverse() {
+        let input = document.getElementById('reverseInput').value;
+        document.getElementById('reverseRes').innerText = reverse(input);
+    }
+
+    function callFibonacci() {
+        let input = document.getElementById('fibonacciInput').value;
+        let tableBody = document.getElementById('resBody');
+
+        let res = fibonacci(input);
+
+        while (tableBody.rows.length > 0) {
+            tableBody.deleteRow(0);
+        }
+
+        for (let i = 0; i < res.length; i++) {
+            let tr = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+
+
+            td1.appendChild(document.createTextNode(i));
+            td2.appendChild(document.createTextNode(res[i]));
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+
+            tableBody.appendChild(tr);
+        }
+    }
+
+    function callSquare() {
+        let input = document.getElementById('squareInput').value;
+        document.getElementById('squareRes').innerText = square(input);
+    }
+
+    function callTrainDestination() {
+        let input = document.getElementById('trainDestInput').value;
+        let res = findTrainsToDestination(input);
+
+        document.getElementById("trainDestRes").innerHTML = '';
+        writeTrainResults("trainDestRes", res);
+    }
+
+    function callTrainDestTime() {
+        let input = document.getElementById('trainDestTimeInput').value;
+        let timeInput = document.getElementById('trainTimeInput').value;
+        let res = findTrainsToDestinationAfterTime(input, timeInput);
+
+        document.getElementById("trainDestTimeRes").innerHTML = '';
+        writeTrainResults("trainDestTimeRes", res);
+    }
+
+    function callSeatsTrains() {
+        let input = document.getElementById('trainSeatsInput').value;
+        let res = findTrainsToDestinationWithSeats(input);
+
+        document.getElementById("trainSeatsRes").innerHTML = '';
+        writeTrainResults("trainSeatsRes", res);
+    }
+
+    function writeTrainResults(ulId, res){
+        for (let train of res) {
+            let ul = document.getElementById(ulId);
+            let li = document.createElement("li");
+            li.innerText = '#' + train.number + ' ' + train.departureTime + ' ' +
+                train.seatsAmount + ' місць, ' + train.generalSeats + ' плацкартних місць';
+            ul.appendChild(li);
+        }
+    }
+
+
+</script>
+</body>
+</html>
