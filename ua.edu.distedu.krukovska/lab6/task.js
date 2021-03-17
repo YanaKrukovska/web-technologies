@@ -20,13 +20,12 @@ function fibonacci(n) {
     return numbers;
 }
 
-function ln(n, x) {
-
-}
-
-
-function square(d) {
-    return d * d / 2;
+function lnTaylorSeries(n, x) {
+    let result = 0;
+    for (let i = 1; i <= n; i++) {
+        result += ((Math.pow(-1, i + 1) * Math.pow(x, i))/i);
+    }
+    return result;
 }
 
 let trains = [
@@ -117,7 +116,6 @@ function findTrainsToDestination(destination) {
     destination = destination.toLowerCase();
     let res = [];
     for (let item of trains) {
-        console.log(destination);
         if (item.destination.toLowerCase() === destination) {
             res.push(item);
         }
@@ -131,12 +129,13 @@ function findTrainsToDestinationAfterTime(destination, time) {
     destination = destination.toLowerCase();
 
     for (let item of trains) {
-        if (item.destination === destination.toLowerCase() &&
+        if (item.destination.toLowerCase() === destination &&
             (Date.parse("01/01/2001 " + time) < Date.parse("01/01/2001 " + item.departureTime))) {
             res.push(item);
         }
     }
 
+    console.log(res)
     res.sort((a, b) => (Date.parse("01/01/2001 " + a.departureTime) > Date.parse("01/01/2001 " + b.departureTime)) ? 1 : -1);
 
     return res;

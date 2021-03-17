@@ -5,24 +5,34 @@
     <title>JavaScript task</title>
     <script src="task.js"></script>
 </head>
+<style>
+    th, td {
+        font-size: 18px;
+    }
+
+    td {
+        border: 1px solid darkslategrey;
+    }
+</style>
 <body>
 
 <h2>Reverse: зміна порядку символів у рядку на протилежний</h2>
 <form name="reverseForm">
-    <label> Введіть рядок: <input id="reverseInput" name="reverseInput" type="text" minlength="1"></label>
-    <button type="button" onclick="callReverse()">Reverse</button>
+    <label> Введіть рядок: <input id="reverseInput" name="reverseInput" type="text"></label>
+    <button id="reverse-button" type="button">Reverse</button>
     <p id="reverseRes"></p>
 </form>
 
 <h2>Fibonacci: розрахунок чисел фібоначі до N-ого числа</h2>
 <form name="fibonacciForm">
-    <label> Введіть N: <input id="fibonacciInput" type="number" min="3"></label>
+    <label> Введіть N: <input id="fibonacciInput" type="number"></label>
     <button type="button" onclick="callFibonacci()">Find fibonacci</button>
+    <br><br>
     <table id="resTable" style="border: 2px solid black">
         <thead>
         <tr>
-            <th scope="col">Fn</th>
-            <th scope="col">Result</th>
+            <th>N</th>
+            <th>Result</th>
         </tr>
         </thead>
         <tbody id="resBody">
@@ -30,10 +40,19 @@
     </table>
 </form>
 
-<h2>Square: знаходження площі квадрата з діагоналлю N</h2>
+<h2>Taylor series ln(x+1): розрахунок натурального логарифма ln(x+1) з використанням ряду Тейлора</h2>
+<form name="logarithmForm">
+    <label> Введіть n: <input id="logarithmNInput" type="number"></label>
+    <label> Введіть x: <input id="logarithmXInput" type="number"></label>
+    <button id="logarithm-button" type="button" onclick="callLogarithm()">Calculate</button>
+    <p id="logarithmRes">Ряд Тейлора: </p>
+    <p id="logarithmInBuiltRes">Вбудований метод: </p>
+</form>
+
+<h2>Square: знаходження площі квадрата з діагоналлю d. d<sup>2</sup>/2</h2>
 <form name="squareForm">
-    <label> Введіть діагональ: <input id="squareInput" name="squareInput" type="number" min="1"></label>
-    <button type="button" onclick="callSquare()">Find square</button>
+    <label> Введіть діагональ: <input id="squareInput" name="squareInput" type="number"></label>
+    <button type="button" id="square-button">Find square</button>
     <p id="squareRes"></p>
 </form>
 
@@ -56,69 +75,116 @@
     </button>
     <ul id="trainSeatsRes"></ul>
 </form>
+
 <script>
-    function callReverse() {
+    document.getElementById("reverse-button").addEventListener("click", function () {
         let input = document.getElementById('reverseInput').value;
-        document.getElementById('reverseRes').innerText = reverse(input);
-    }
+        input.length === 0 ? alert('Рядок не може бути пустим') :
+            document.getElementById('reverseRes').innerText = reverse(input);
+    });
+
 
     function callFibonacci() {
         let input = document.getElementById('fibonacciInput').value;
-        let tableBody = document.getElementById('resBody');
 
-        let res = fibonacci(input);
+        if (input.length === 0) {
+            alert('Введіть число');
+        } else if (input < 2) {
+            alert('Введіть число більше за 1');
+        } else {
 
-        while (tableBody.rows.length > 0) {
-            tableBody.deleteRow(0);
-        }
+            let tableBody = document.getElementById('resBody');
+            let res = fibonacci(input);
 
-        for (let i = 0; i < res.length; i++) {
-            let tr = document.createElement('tr');
-            let td1 = document.createElement('td');
-            let td2 = document.createElement('td');
+            while (tableBody.rows.length > 0) {
+                tableBody.deleteRow(0);
+            }
 
+            for (let i = 0; i < res.length; i++) {
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
 
-            td1.appendChild(document.createTextNode(i));
-            td2.appendChild(document.createTextNode(res[i]));
+                td1.appendChild(document.createTextNode(i));
+                td2.appendChild(document.createTextNode(res[i]));
 
-            tr.appendChild(td1);
-            tr.appendChild(td2);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
 
-            tableBody.appendChild(tr);
+                tableBody.appendChild(tr);
+            }
         }
     }
 
-    function callSquare() {
+    let logarithmResText = 'Ряд Тейлора: ';
+    let logarithmInBuiltResText = 'Вбудований метод: ';
+
+    function callLogarithm() {
+        let xInput = document.getElementById('logarithmXInput').value;
+        let nInput = document.getElementById('logarithmNInput').value;
+
+        if (xInput.length === 0 || nInput.length === 0) {
+            alert('Введіть значення');
+        } else if (xInput >= 1 || xInput <= -1) {
+            alert('Введіть значення х таке, що |x| < 1');
+        } else if (nInput < 0) {
+            alert('Введіть значення n більше за 0');
+        } else {
+            let res = lnTaylorSeries(nInput, xInput);
+            let builtInRes = Math.log1p(xInput);
+
+            document.getElementById('logarithmRes').innerText = logarithmResText + res;
+            document.getElementById('logarithmInBuiltRes').innerText = logarithmInBuiltResText + builtInRes;
+        }
+    }
+
+    let calculateSquare = function (d) {
+        return d * d / 2;
+    }
+
+    document.getElementById("square-button").onclick = function () {
         let input = document.getElementById('squareInput').value;
-        document.getElementById('squareRes').innerText = square(input);
-    }
+        input <= 0 ? alert('Число має бути більшим за 0') :
+            document.getElementById('squareRes').innerText = calculateSquare(input);
+    };
 
     function callTrainDestination() {
         let input = document.getElementById('trainDestInput').value;
-        let res = findTrainsToDestination(input);
 
-        document.getElementById("trainDestRes").innerHTML = '';
-        writeTrainResults("trainDestRes", res);
+        if (input.length === 0) {
+            alert('Введіть значення');
+        } else {
+            document.getElementById("trainDestRes").innerHTML = '';
+            writeTrainResults("trainDestRes", findTrainsToDestination(input));
+        }
     }
 
     function callTrainDestTime() {
         let input = document.getElementById('trainDestTimeInput').value;
         let timeInput = document.getElementById('trainTimeInput').value;
-        let res = findTrainsToDestinationAfterTime(input, timeInput);
 
-        document.getElementById("trainDestTimeRes").innerHTML = '';
-        writeTrainResults("trainDestTimeRes", res);
+        if (input.length === 0) {
+            alert('Введіть напрямок');
+        } else if (timeInput.length === 0) {
+            alert('Введіть час');
+        } else {
+            document.getElementById("trainDestTimeRes").innerHTML = '';
+            writeTrainResults("trainDestTimeRes", findTrainsToDestinationAfterTime(input, timeInput));
+        }
     }
 
     function callSeatsTrains() {
         let input = document.getElementById('trainSeatsInput').value;
-        let res = findTrainsToDestinationWithSeats(input);
 
-        document.getElementById("trainSeatsRes").innerHTML = '';
-        writeTrainResults("trainSeatsRes", res);
+        if (input.length === 0) {
+            alert('Введіть значення');
+        } else {
+            document.getElementById("trainSeatsRes").innerHTML = '';
+            writeTrainResults("trainSeatsRes", findTrainsToDestinationWithSeats(input));
+        }
     }
 
-    function writeTrainResults(ulId, res){
+    function writeTrainResults(ulId, res) {
         for (let train of res) {
             let ul = document.getElementById(ulId);
             let li = document.createElement("li");
