@@ -1,0 +1,15 @@
+body > * {
+    margin-left: 50px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+th, td {
+    font-size: 18px;
+}
+
+td {
+    border: 1px solid darkslategrey;
+}

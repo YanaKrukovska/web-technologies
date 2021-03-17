@@ -7,13 +7,12 @@ function reverse(s) {
 }
 
 function fibonacci(n) {
-    let i;
     let numbers = [];
 
     numbers[0] = 0;
     numbers[1] = 1;
 
-    for (i = 2; i <= n; i++) {
+    for (let i = 2; i <= n; i++) {
         numbers[i] = numbers[i - 2] + numbers[i - 1];
     }
 
@@ -23,7 +22,7 @@ function fibonacci(n) {
 function lnTaylorSeries(n, x) {
     let result = 0;
     for (let i = 1; i <= n; i++) {
-        result += ((Math.pow(-1, i + 1) * Math.pow(x, i))/i);
+        result += ((Math.pow(-1, i + 1) * Math.pow(x, i)) / i);
     }
     return result;
 }
@@ -120,7 +119,6 @@ function findTrainsToDestination(destination) {
             res.push(item);
         }
     }
-
     return res;
 }
 
@@ -135,9 +133,8 @@ function findTrainsToDestinationAfterTime(destination, time) {
         }
     }
 
-    console.log(res)
-    res.sort((a, b) => (Date.parse("01/01/2001 " + a.departureTime) > Date.parse("01/01/2001 " + b.departureTime)) ? 1 : -1);
-
+    res.sort((a, b) => (Date.parse("01/01/2001 " + a.departureTime) >
+        Date.parse("01/01/2001 " + b.departureTime)) ? 1 : -1);
     return res;
 }
 
@@ -152,6 +149,5 @@ function findTrainsToDestinationWithSeats(destination) {
     }
 
     res.sort((a, b) => (a.generalSeats > b.generalSeats) ? 1 : -1);
-
     return res;
 }

@@ -3,22 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>JavaScript task</title>
-    <script src="task.js"></script>
+    <script src="js/task.js"></script>
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<style>
-    th, td {
-        font-size: 18px;
-    }
-
-    td {
-        border: 1px solid darkslategrey;
-    }
-</style>
 <body>
 
 <h2>Reverse: зміна порядку символів у рядку на протилежний</h2>
 <form name="reverseForm">
-    <label> Введіть рядок: <input id="reverseInput" name="reverseInput" type="text"></label>
+    <label> Введіть рядок: <input id="reverseInput" name="reverseInput" type="text" required></label>
     <button id="reverse-button" type="button">Reverse</button>
     <p id="reverseRes"></p>
 </form>
@@ -41,6 +33,7 @@
 </form>
 
 <h2>Taylor series ln(x+1): розрахунок натурального логарифма ln(x+1) з використанням ряду Тейлора</h2>
+<img src="images/logarithm-formula.JPG" alt="Taylor series ln(x+1) formula" width="202px">
 <form name="logarithmForm">
     <label> Введіть n: <input id="logarithmNInput" type="number"></label>
     <label> Введіть x: <input id="logarithmXInput" type="number"></label>
@@ -79,6 +72,7 @@
 <script>
     document.getElementById("reverse-button").addEventListener("click", function () {
         let input = document.getElementById('reverseInput').value;
+
         input.length === 0 ? alert('Рядок не може бути пустим') :
             document.getElementById('reverseRes').innerText = reverse(input);
     });
@@ -193,8 +187,6 @@
             ul.appendChild(li);
         }
     }
-
-
 </script>
 </body>
 </html>
