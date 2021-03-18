@@ -12,7 +12,7 @@
 <form name="reverseForm">
     <label> Введіть рядок: <input id="reverseInput" name="reverseInput" type="text" required></label>
     <button id="reverse-button" type="button">Reverse</button>
-    <p id="reverseRes"></p>
+    <p id="reverseRes">Результат: </p>
 </form>
 
 <h2>Fibonacci: розрахунок чисел фібоначі до N-ого числа</h2>
@@ -46,7 +46,7 @@
 <form name="squareForm">
     <label> Введіть діагональ: <input id="squareInput" name="squareInput" type="number"></label>
     <button type="button" id="square-button">Find square</button>
-    <p id="squareRes"></p>
+    <p id="squareRes">Результат: </p>
 </form>
 
 <h2>Trains: запити до потягів </h2>
@@ -74,7 +74,7 @@
         let input = document.getElementById('reverseInput').value;
 
         input.length === 0 ? alert('Рядок не може бути пустим') :
-            document.getElementById('reverseRes').innerText = reverse(input);
+            document.getElementById('reverseRes').innerText = 'Результат: ' + reverse(input);
     });
 
 
@@ -139,7 +139,7 @@
     document.getElementById("square-button").onclick = function () {
         let input = document.getElementById('squareInput').value;
         input <= 0 ? alert('Число має бути більшим за 0') :
-            document.getElementById('squareRes').innerText = calculateSquare(input);
+            document.getElementById('squareRes').innerText = 'Результат: ' + calculateSquare(input);
     };
 
     function callTrainDestination() {
@@ -179,14 +179,19 @@
     }
 
     function writeTrainResults(ulId, res) {
-        for (let train of res) {
-            let ul = document.getElementById(ulId);
-            let li = document.createElement("li");
-            li.innerText = '#' + train.number + ' ' + train.departureTime + ' ' +
-                train.seatsAmount + ' місць, ' + train.generalSeats + ' плацкартних місць';
-            ul.appendChild(li);
+        if (res.length === 0) {
+            alert('Результатів не знайдено!')
+        } else {
+            for (let train of res) {
+                let ul = document.getElementById(ulId);
+                let li = document.createElement("li");
+                li.innerText = '#' + train.number + ' ' + train.departureTime + ' ' +
+                    train.seatsAmount + ' місць, ' + train.generalSeats + ' плацкартних місць';
+                ul.appendChild(li);
+            }
         }
     }
 </script>
+
 </body>
 </html>

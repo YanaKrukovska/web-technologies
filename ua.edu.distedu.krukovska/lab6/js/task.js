@@ -27,89 +27,28 @@ function lnTaylorSeries(n, x) {
     return result;
 }
 
-let trains = [
-    {
-        destination: 'Київ',
-        number: 111,
-        departureTime: '11:10',
-        seatsAmount: 200,
-        separateSeats: 120,
-        generalSeats: 80
-    },
-    {
-        destination: 'Львів',
-        number: 112,
-        departureTime: '11:59',
-        seatsAmount: 100,
-        separateSeats: 100,
-        generalSeats: 0
-    },
-    {
-        destination: 'Варшава',
-        number: 212,
-        departureTime: '11:59',
-        seatsAmount: 200,
-        separateSeats: 88,
-        generalSeats: 112
-    },
-    {
-        destination: 'Київ',
-        number: 137,
-        departureTime: '05:16',
-        seatsAmount: 100,
-        separateSeats: 100,
-        generalSeats: 0
-    },
-    {
-        destination: 'Дніпро',
-        number: 139,
-        departureTime: '22:30',
-        seatsAmount: 115,
-        separateSeats: 15,
-        generalSeats: 100
-    },
-    {
-        destination: 'Харків',
-        number: 103,
-        departureTime: '13:40',
-        seatsAmount: 209,
-        separateSeats: 34,
-        generalSeats: 175
-    },
-    {
-        destination: 'Львів',
-        number: 119,
-        departureTime: '18:00',
-        seatsAmount: 100,
-        separateSeats: 0,
-        generalSeats: 100
-    },
-    {
-        destination: 'Львів',
-        number: 120,
-        departureTime: '19:00',
-        seatsAmount: 50,
-        separateSeats: 50,
-        generalSeats: 0
-    },
-    {
-        destination: 'Київ',
-        number: 154,
-        departureTime: '15:56',
-        seatsAmount: 100,
-        separateSeats: 50,
-        generalSeats: 50
-    },
-    {
-        destination: 'Дніпро',
-        number: 138,
-        departureTime: '04:30',
-        seatsAmount: 115,
-        separateSeats: 100,
-        generalSeats: 15
-    }
+function Train(destination, number, departureTime, seatsAmount, separateSeats, generalSeats) {
+    this.destination = destination;
+    this.number = number;
+    this.departureTime = departureTime;
+    this.seatsAmount = seatsAmount;
+    this.separateSeats = separateSeats;
+    this.generalSeats = generalSeats;
+}
 
-]
+let trains = [
+    new Train('Київ', 111, "11:10", 200, 120, 80),
+    new Train('Львів', 112, "11:59", 100, 100, 0),
+    new Train('Варшава', 212, "11:59", 200, 88, 112),
+    new Train('Київ', 137, "05:16", 100, 100, 0),
+    new Train('Дніпро', 139, "22:30", 115, 15, 100),
+    new Train('Харків', 103, "13:40", 209, 34, 175),
+    new Train('Львів', 119, "18:00", 100, 0, 100),
+    new Train('Львів', 120, "19:00", 50, 50, 0),
+    new Train('Київ', 154, "15:56", 100, 50, 50),
+    new Train('Дніпро', 138, "04:30", 115, 100, 15),
+];
+
 
 function findTrainsToDestination(destination) {
     destination = destination.toLowerCase();
