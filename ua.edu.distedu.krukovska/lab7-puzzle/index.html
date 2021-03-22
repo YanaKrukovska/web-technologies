@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <title>Puzzle Game</title>
     <script src="puzzle.js"></script>
-    <style>
-        html, body {
-            margin: 0;
-            height: 100%;
-            overflow: hidden
-        }
-
-        #puzzle-parts {
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
-            height: 70%;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body onload="loadImages()">
+<div id="answer-field">
+    <div id="puzzle-part1" class="puzzle-spot"></div>
+    <div id="puzzle-part2" class="puzzle-spot"></div>
+    <div id="puzzle-part3" class="puzzle-spot"></div>
+    <div id="puzzle-part4" class="puzzle-spot"></div>
+</div>
 <div id="puzzle-parts">
 </div>
 </body>
